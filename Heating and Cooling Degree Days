@@ -1,0 +1,19 @@
+#Maurice Koh
+#zhi.koh1@marist.edu
+#Heating and Cooling Degree Days
+
+
+
+def avgtemp():
+    temperature = input("Enter the average temperature for a day with commas between days: ")
+    Hot = 0
+    Cool = 0
+    temperature = temperature.split(",")
+    for i in temperature:
+        if int(i) > 80 or int(i) <60:
+            if int(i) > 80 :
+                Cool = Cool + (int(i) -80)
+            else:
+                Hot = Hot + (60 - int(i))
+    print("There are",Hot," heating degree days and",Cool,"cooling degrees days.")
+avgtemp()
